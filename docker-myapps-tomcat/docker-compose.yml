@@ -1,0 +1,113 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  tomcat:
+    image: registry.cn-hangzhou.aliyuncs.com/obpm/myapps-tomcat:nightbuild  # 阿里云镜像版本
+    restart: always
+    environment:
+      myapps.storage.root: /storage
+      JAVA_OPTS: "-Djava.security.egd=file:/dev/./urandom"
+      spring.activemq.broker-url: tcp://activemq-srv:61616
+      spring.activemq.user: admin   #activeMq账号
+      spring.activemq.password: admin #activeMq密码
+      spring.redis.host: redis-srv
+      spring.cloud.consul.host: consul-srv
+      logging.level.root: INFO
+#      spring.datasource.url: jdbc:mysql://${DB_HOST}:${DB_PORT}/obpm5?characterEncoding=UTF-8&serverTimezone=GMT&useSSL=false
+      spring.datasource.username: ${DB_USERNAME}
+      spring.datasource.password: ${DB_PASSWORD}
+      JAVA_FONTS: /usr/local/storage
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+    networks:
+      mynet2:
+        aliases:
+         - tomcat
+#    command: catalina.sh run
+    ports:
+      - 8080:8080
+    volumes:
+      - "./storage:/storage"
+      - "./tomcat/server.xml:/usr/local/tomcat/conf/server.xml"
+      - "./tomcat/webapps/ROOT:/usr/local/tomcat/webapps/ROOT"
+      - "./storage/logs/tomcat:/usr/local/tomcat/logs"
+      - "./tomcat/temp:/usr/local/tomcat/temp"
+      - "./storage/fonts:/usr/lib/jvm/jre/lib/fonts/fallback"
+      - "./storage/fonts:/usr/share/fonts/dejavu"
+    links:
+      - redis
+      - mysql
+      - consul
+      - activemq
+    command: ["wait-for-it.sh", "mysql:3307", "--timeout=0", "--strict", "--", "catalina.sh", "run"]
+  consul: # 服务名称，用户自定义
+    image: registry.cn-hangzhou.aliyuncs.com/obpm/consul:1.15.2  # 镜像版本
+#    network_mode: "host"
+    restart: always
+    container_name: consul_node1
+    networks:
+      mynet2:
+        aliases:
+         - consul-srv
+    command:  agent -server -bootstrap-expect 1 -bind=0.0.0.0 -ui -client=0.0.0.0
+#    ports:
+#    - 8400:8400  # 暴露端口
+#    - 8500:8500
+  mysql:
+    networks:
+      mynet2:
+        aliases:
+         - mysql-srv
+    ports:
+      - "3307:3307"
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+#      MYSQL_USER: 'test'
+#      MYSQL_PASS: 'test'
+    image: "registry.cn-hangzhou.aliyuncs.com/obpm/mysql:5.7.16" 
+    container_name: mysql
+    volumes:
+      - "./mysql/data:/var/lib/mysql"
+      - "./mysql/my.cnf:/etc/my.cnf"
+      - "./mysql/init:/docker-entrypoint-initdb.d"
+  redis:
+    image: registry.cn-hangzhou.aliyuncs.com/obpm/redis:7.0.9
+    container_name: my_redis
+    restart: always
+    networks:
+      mynet2:
+        aliases:
+         - redis-srv
+#    ports:
+#      - "6379:6379"
+    volumes:
+      - ./redis/data:/data
+  activemq:
+    image: registry.cn-hangzhou.aliyuncs.com/obpm/activemq:5.14.3
+    restart: always
+    networks:
+      mynet2:
+        aliases:
+         - activemq-srv
+#    ports:
+#      - 61613:61613
+#      - 61616:61616
+#      - 8161:8161
+    #持久化
+    volumes:
+      - ./activemq/data:/data/activemq
+      - ./activemq/log:/var/log/activemq
+    #环境变量
+    environment:
+      - ACTIVEMQ_ADMIN_LOGIN=admin
+      - ACTIVEMQ_ADMIN_PASSWORD=admin
+      - ACTIVEMQ_CONFIG_MINMEMORY=512
+      - ACTIVEMQ_CONFIG_MAXMEMORY=2048
+      - TZ=Asia/Shanghai
+volumes:
+  storage: {}
+networks:
+  mynet2:
+    driver: bridge

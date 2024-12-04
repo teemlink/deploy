@@ -1,0 +1,23 @@
+[ {
+  "id" : "Ai6hllhNjS2ull9TKGb",
+  "name" : "Admin",
+  "parentId" : null,
+  "applicationid" : "",
+  "description" : null,
+  "level" : 1,
+  "domains" : null,
+  "applications" : [ "__UxZgvkJqNzNBTKGmcAy" ],
+  "departments" : null,
+  "loginno" : "admin",
+  "loginpwd" : "3e2708abc7e6158d446248d0d89cf6519ca9fec29b4e2384248e8554d394f1b4",
+  "email" : null,
+  "status" : 1,
+  "type" : "super",
+  "pwdErrorTimes" : 0,
+  "superAdmin" : true,
+  "developer" : true,
+  "domainAdmin" : false,
+  "secret" : "11ec-f9e6-bfd11ebc-8686-db41214c5a52",
+  "lockTime" : 0,
+  "departmentList" : [ ]
+} ]

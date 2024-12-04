@@ -1,0 +1,158 @@
+#_contentTable{
+  padding-top: 15px;
+}
+body {
+  font-family: SimSun;
+}
+
+.formTable td {
+  padding: 10px;
+}
+.displayn,#activityTable {
+  display: none;
+}
+.obpm-print #form-content #document_content #container #_contentTable #toAll table {
+  margin: 0 auto !important;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.formTable {
+  padding-top: 0px;
+}
+.contentPanel {
+  width: 100% !important;
+  max-width: 100%;
+}
+#viewHtml td {
+  padding: 4px;
+  font-size: 8px;
+}
+.listDataTrTd {
+  border: 1px solid rgb(180, 204, 238);
+  border-top-color: transparent;
+  padding: 1px 1px 1px 6px;
+  font-size: 5px;
+  color: #000;
+  word-break: break-all;
+  white-space: normal;
+}
+.listDataTrTd a,.listDataThTd a {
+  text-decoration: none;
+  color: #000;
+}
+.listDataThTd {
+  border: 1px solid rgb(180, 204, 238);
+  font-weight: 400;
+  padding: 1px 1px 1px 6px;
+  font-size: 5px;
+  background: #fff;
+  color: #000;
+  word-break: break-all;
+  white-space: normal;
+}
+.displayi-b {
+  color: #000;
+  height: auto;
+  width: 50px;
+}
+.obpm-listdatath,.obpm-listdatatr {
+  height: auto;
+}
+.obpm-viewtable {
+  padding: 0px;
+  margin: 0px;
+  height: '';
+}
+.obpm-datatable-head {
+  padding: 0px;
+  margin: 0px;
+}
+.listDataThFirstTd,.listDataTrFirstTd,.gridview-firstTd,#isPagination {
+  display: none;
+}
+th {
+	font-weight: 400;
+  border: 1px solid rgb(180, 204, 238);
+}
+.gridview-table-main td {
+  border: 1px solid rgb(180, 204, 238);
+}
+#_formHtml {
+  width: 100%;
+  padding-top: 20px;
+}
+
+
+#_formHtml span{
+  display: inline-block;
+}
+#_formHtml div[scope=formPanel]{
+display: inline-block !important;
+}
+
+
+
+
+/*
+ *以下是vue的
+*/
+.custom-process {
+  display: none;
+}
+.formHtml {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.formHtml .include-control {
+  width: 100% !important;
+  overflow: hidden;
+}
+
+.formHtml .include-control th {
+  font-size: 13px !important;
+}
+
+.formHtml .include-control td .cell div{
+  text-align: center;
+}
+
+.formHtml table{
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+/* .formHtml span{
+  display: inline-block;
+  word-break: break-all;
+  word-wrap: break-word;
+} */
+.formHtml font{
+  display: inline-block;
+}
+.formHtml td{
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+} 
+.formHtml td p{
+  word-break: break-all;
+  word-wrap: break-word;
+  padding: 10px;
+} 
+.formHtml td span{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+} 
+.date-wrap {
+  width: 100% !important;
+  white-space: nowrap;
+}

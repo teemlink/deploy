@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Key="uOu+AQC3V7rbfyIPVkMmEeri2q7JUYmEIsz6VanNhF9qnL2XTKz2ZemSW6YUJLrws0eTwyxIZpC1QrLelL4W0787TTIOnH29wBQ4QpptSELOwbFAmiXOCjsTcO7sYp7ZQISlCjM9tA5HB0wcEDl2uPzw2b8nFePto6rokdYKdLQG+9UGPRriOjfX0ibFDpM7Xw2xmmEvmkCAtjk0DXpVbvjFU+T/GHw0MsKPE7G5KeUn4rneLF9PIWmhtZVsbKTtZzRR1/hGjszNVe02aL/9xbnhT3XQrtGCkBKo2HV8+vizdsdu40D7OZTs2/GK3Wd9S6n5auzbxiv6X5a50r29xKae1B/PDwbvELnh0HnfxgiFdgdxPz/wQB2vkJB4ZryjjyqGo5j1itWenxTRq6whFodUM4RC3B6rZKr3cvWy8zunOcSgB/OA1u65jBHEH3XEbwxDxFLRLWfwrTFB15Ih51Hhf1q/kbzJXZMlr3VioWg7XFH2p73vhltEyIp+7o6xZpqUIg6VGS6FpuqUZV1crSK4VCYrcf62vPpsF46bGUV6qt9z7pvCDsTFWY7mYr+7xJSkWiyPTEeZlJpO1XNi3RyenG/Lva83kZeWvPaNYAF30QLGG6pnIw7sEPvkz9z3scR6LcnAZPxe5+XkVwTnetMQ0Y/HE3nAX8Xs0BKam/rOw3eEZc3wYu3n/I7WxVgsg7IiBJdDqGMD51KZE6K6wi4mBNB6U46bcGJrW3fXqNIFC1UjD8b4ErzzoU//gvvyhthm8sFeQKeD27J2+K9Tb7mv8JIDVuGDkYuyvB/cYvVnxLScpiIj+IOWdDwCMvWFBL3MjViizX/VhUzdCUqDdqZwLBHTBoqKTgTJY32Pav33Rko2HkVTJSrFRdw0Tmxgnd2ZMpjMPnF2DVWilN2/WM2Lnqc/TRf8ctubGWdAretEtiKkOsVQ+EHughY9sBcMS1bjNvgW+ITP/3l8XCGGrN+kI9M30pdmjcoIiEC6gV1nwz1JNueluM5P1lrK2f1AYMrlkoLVfMYzyGC0FSRUEUnTxdZQCC0Fa86PIJ/pXnxRaQ/4CKmpTnvNta7aCqkTYYQK9Ibs99eEQKYIw127uHSQXZBux44yAz94i64IfcdyV8fhTzVIHNVGUodoyMp0AmRJQLxb2aeq08hRFZrfB7ols8wOREoqKJwtl0zE4fDGMJgQvcEpCIBs3wl5bcOcf5wRxJqBCqetIMaZc7OYuPTGlE3li4qlqSir5xlDctMIDSir7YLHfBjddzHygCE3nmxgOqBig688C8TjIWk/t08hgAcOp2TPXuGg78GettooOCdvXcDuU9rqDHWl2yReOhycKaPkRMMBb5j10VL+VYpgq6VEBEh+oH1AWF6OwKtQkk8W8yt8P2VnDVTS+uFJz9/dXMBbDMCPv4iW4AIpOXIGbq5vERJifSx7IbHqDxYmRnRWCm4wTUnxk+awnHa2+aUt5wlyRg9+Zh0udvtYl1odVzMSIKD4x1i/vbG1FGSSO3kwnq9akStDOTsmjeOx4G9lPqidcvbK/CqaxjjWVw==" Version="1.3">
+	<Type>Runtime</Type>
+	<Username>广州市天翎网络科技有限公司</Username>
+	<Email>1576813701@qq.com</Email>
+	<Organization>广州市天翎网络科技有限公司</Organization>
+	<LicensedDate>2022-11-28T00:00:00Z</LicensedDate>
+	<ExpiredDate>2023-11-28T00:00:00Z</ExpiredDate>
+	<Products>
+		<Product>
+			<Name>Spire.Doc for JAVA</Name>
+			<Version>10.11</Version>
+			<Subscription>
+				<NumberOfPermittedDeveloper>10</NumberOfPermittedDeveloper>
+				<NumberOfPermittedSite>10</NumberOfPermittedSite>
+			</Subscription>
+		</Product>
+	</Products>
+	<Issuer>
+		<Name>e-iceblue</Name>
+		<Email>sales@e-iceblue.com</Email>
+		<Url>http://www.e-iceblue.com</Url>
+	</Issuer>
+</License>

@@ -1,0 +1,8 @@
+[ {
+  "status" : false,
+  "preview" : false,
+  "download" : true,
+  "print" : true,
+  "mode" : "custom",
+  "customContent" : "水印"
+} ]
